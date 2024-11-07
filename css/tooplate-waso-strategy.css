@@ -14,13 +14,14 @@ Free Bootstrap 5 HTML Template
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #f9c10b;
-  --secondary-color:              #dc3545;
-  --section-bg-color:             #f5f5f5;
+  --primary-color:                #FEDF02;
+  --cg-warning-color:             #FBBA00;
+  --secondary-color:              #FF9124;
+  --section-bg-color:             #f4f4f4;
   --dark-color:                   #000000;
-  --p-color:                      #717275;
+  --p-color:                      #242E3D;
 
-  --body-font-family:             'DM Sans', sans-serif;
+  --body-font-family:             'Poppins', sans-serif;
 
   --h1-font-size:                 60px;
   --h2-font-size:                 42px;
@@ -133,7 +134,7 @@ a:hover {
 
 .section-hero ::selection,
 .bg-warning ::selection {
-  background: #f9d55c;
+  background: var(--cg-warning-color);
 }
 
 .section-padding {
@@ -252,9 +253,7 @@ strong {
 }
 
 .navbar-brand {
-  font-size: 32px;
-  font-weight: var(--font-weight-bold);
-  color: var(--primary-color);
+  max-width: 300px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -274,7 +273,7 @@ strong {
 .navbar-nav .nav-link.active, 
 .navbar-nav .nav-link:hover,
 .projects-detail-page .navbar-nav .nav-link.active:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .projects-detail-page .navbar-nav .nav-link.active {
@@ -712,7 +711,7 @@ strong {
   SITE FOOTER              
 -----------------------------------------*/
 .site-footer {
-  background: var(--primary-color);
+  background: var(--dark-color);
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -816,11 +815,6 @@ strong {
     padding-bottom: 10px;
   }
 
-  .site-header .social-icon {
-    text-align: left;
-    margin-top: 10px;
-  }
-
   .carousel-caption {
     width: 100%;
   }
@@ -907,3 +901,6 @@ strong {
   }
 }
 
+.text-warning {
+  color: var(--cg-warning-color);
+}
