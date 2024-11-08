@@ -30,8 +30,8 @@ Free Bootstrap 5 HTML Template
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
   --p-font-size:                  18px;
-  --menu-font-size:               14px;
-  --copyright-text-font-size:     16px;
+  --menu-font-size:               16px;
+  --copyright-text-font-size:     14px;
 
   --font-weight-normal:           400;
   --font-weight-medium:           500;
@@ -264,7 +264,7 @@ strong {
 .navbar-nav .nav-link {
   color: var(--p-color);
   font-size: var(--menu-font-size);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -737,7 +737,6 @@ strong {
 }
 
 .social-icon-link {
-  background: var(--white-color);
   border-radius: 20px;
   font-size: var(--copyright-text-font-size);
   color: var(--dark-color);
@@ -754,6 +753,10 @@ strong {
   color: var(--primary-color);
 }
 
+.phone-text {
+  font-size: var(--copyright-text-font-size);
+  color: var(--dark-color);
+}
 
 /*---------------------------------------
   RESPONSIVE STYLES               
@@ -903,4 +906,7 @@ strong {
 
 .text-warning {
   color: var(--cg-warning-color);
+}
+.text-yellow {
+  color: var(--primary-color);
 }
