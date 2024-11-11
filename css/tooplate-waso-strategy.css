@@ -16,7 +16,7 @@ Free Bootstrap 5 HTML Template
   --white-color:                  #ffffff;
   --primary-color:                #FEDF02;
   --cg-warning-color:             #FBBA00;
-  --secondary-color:              #FF9124;
+  --secondary-color:              #FBBA00;
   --section-bg-color:             #f4f4f4;
   --dark-color:                   #000000;
   --p-color:                      #242E3D;
@@ -220,16 +220,16 @@ strong {
   CUSTOM BUTTON               
 -----------------------------------------*/
 .custom-btn {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   border-radius: 100px;
-  color: var(--white-color);
+  color: var(--dark-color);
   font-size: var(--copyright-text-font-size);
   font-weight: var(--font-weight-bold);
   padding: 12px 24px;
 }
 
 .custom-btn:hover {
-  background: var(--primary-color);
+  background: var(--secondary-color);
   color: var(--white-color);
 }
 
@@ -749,8 +749,8 @@ strong {
   text-align: center;
 }
 
-.social-icon-link:hover {
-  color: var(--primary-color);
+.social-icon-link:hover, .phone-text:hover {
+  color: var(--dark-color);
 }
 
 .phone-text {
