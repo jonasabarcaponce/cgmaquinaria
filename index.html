@@ -82,7 +82,7 @@
                             </a>
                         </li>
                     </ul>
-                <div>
+                </div>
                         
             </div>
         </nav>
@@ -294,7 +294,7 @@
                             <h2>Píde información</h2>
                         </div>
                         <div class="col-lg-7 col-12">
-                            <form class="custom-form contact-form" id="contactForm" method="post" role="form"></form>
+                            <form class="custom-form contact-form" id="contactForm" method="post" role="form">
                                 <div class="row">
                                     <div class="col-12">                                    
                                         <input type="text" name="name" id="name" class="form-control" placeholder="Nombre completo" autocomplete="name" required>
@@ -314,7 +314,7 @@
                         </div>
                         <div class="col-lg-5 col-12">
                             <div class="contact-info bg-white shadow-lg">
-                                <h5 class="mb-4">Av. Bonampak #3, Cancún, QR 77500</h>
+                                <h5 class="mb-4">Av. Bonampak #3, Cancún, QR 77500</h5>
                                 <h5 class="mb-2">
                                     <a href="tel:+529984187535">
                                         <i class="bi-telephone contact-icon me-2"></i>
@@ -332,7 +332,6 @@
                     </div>
                 </div>
             </section>
-        
         </main>
             
 
@@ -366,6 +365,7 @@
         <script src="js/custom.js"></script>
 
         <script>
+
             document.getElementById('contactForm').addEventListener('submit', async function(event) {
                 event.preventDefault();
                 
@@ -390,6 +390,7 @@
                     document.getElementById('formMessage').innerHTML = '<div class="alert alert-danger">Ocurrió un error al enviar el formulario.</div>';
                 }
             });
+
         </script>
 
     </body>
