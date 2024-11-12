@@ -27,11 +27,11 @@
         
             if (mail($to, $subject, $body, $headers)) {
                 http_response_code(200);
-                echo json_encode(['message' => 'Correo enviado']);
+                echo json_encode(['message' => 'Recibimos tu correo, te contactaremos lo más pronto posible.']);
             } else {
                 // Force success for debugging purposes
                 http_response_code(200); 
-                echo json_encode(['message' => 'Correo enviado, pero sin confirmación explícita de PHP']);
+                echo json_encode(['message' => 'Recibimos tu correo, te contactaremos lo más pronto posible.']);
             }
                         
         } catch (Exception $e) {
