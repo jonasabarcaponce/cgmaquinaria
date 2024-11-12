@@ -294,19 +294,23 @@
                             <h2>Píde información</h2>
                         </div>
                         <div class="col-lg-7 col-12">
-                            <form class="custom-form contact-form" action="" method="post" role="form">
+                            <form class="custom-form contact-form" id="contactForm" method="post" role="form"></form>
                                 <div class="row">
                                     <div class="col-12">                                    
-                                        <input type="text" name="name" id="name" class="form-control" placeholder="Nombre completo" required="">
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="Nombre completo" autocomplete="name" required>
                                     </div>
                                     <div class="col-12">         
-                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Correo electrónico" required="">
+                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Correo electrónico" autocomplete="email" required>
                                     </div>
                                     <div class="col-12">         
-                                        <input type="text" name="phone" id="phone" pattern="" class="form-control" placeholder="Teléfono" required="">
+                                        <input type="text" name="phone" id="phone" pattern="\d{10}" class="form-control" placeholder="Teléfono (10 dígitos)" autocomplete="tel-national" required>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <button type="submit" class="btn custom-btn">Enviar</button>
                                     </div>
                                 </div>
                             </form>
+                            <div id="formMessage" class="mt-3"></div>
                         </div>
                         <div class="col-lg-5 col-12">
                             <div class="contact-info bg-white shadow-lg">
@@ -360,6 +364,33 @@
         <script src="js/magnific-popup-options.js"></script>
         <script src="js/click-scroll.js"></script>
         <script src="js/custom.js"></script>
+
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', async function(event) {
+                event.preventDefault();
+                
+                const form = event.target;
+                const formData = new FormData(form);
+                
+                try {
+                    const response = await fetch('contacto.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (response.ok) {
+                        document.getElementById('formMessage').innerHTML = '<div class="alert alert-success">' + result.message + '</div>';
+                        form.reset();
+                    } else {
+                        document.getElementById('formMessage').innerHTML = '<div class="alert alert-danger">' + result.message + '</div>';
+                    }
+                } catch (error) {
+                    document.getElementById('formMessage').innerHTML = '<div class="alert alert-danger">Ocurrió un error al enviar el formulario.</div>';
+                }
+            });
+        </script>
 
     </body>
 </html>
