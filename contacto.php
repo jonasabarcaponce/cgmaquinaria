@@ -19,8 +19,9 @@
             $to = 'contacto@cgmaquinaria.mx';
             $subject = 'Nuevo Lead';
             $body = "Nombre: $name\nCorreo: $email\nTeléfono: $phone";
-
+            
             $headers = "From: contacto@cgmaquinaria.mx\r\n";
+            $headers .= "Reply-To: $email\r\n";
             $headers .= "MIME-Version: 1.0\r\n";
             $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
         
